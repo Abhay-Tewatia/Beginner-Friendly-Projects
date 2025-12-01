@@ -1,9 +1,97 @@
-/* ✅ Your existing CSS yahi tak rehne do */
-/* ...tumhara poora CSS upar wala as it is... */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "gilroy";
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    background-color: #94e48f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#panel{
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+    border-radius: 7px;
+    background-color: #f4efef;
+}
+
+#ptop{
+    padding: 0px 30%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    color: #f4efef;
+    width: 100%;
+    height: 100px;
+    background-color: #14713e;
+}
+
+.elem{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+.elem h2{
+    font-weight: 500;
+     font-size: 23px;
+
+}
+.box{
+    color: #000;
+    font-weight: 600;
+    font-size: 23px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+
+}
+
+#pbtm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width:100%;
+    height: calc(100% - 100px);
+    /* background-color: black; */
+    padding: 20px;
+}
+
+.bubble{
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #5ba864;
+    color: #ffffff;
+    border-radius: 50%;
+    font-weight: 500;
+
+}
+
+.bubble:hover{
+    background-color: #335c3a;
+    cursor: pointer;
+} 
 
 @media (max-width: 600px) {
 
-    /* Panel ko thoda compact aur screen ke hisaab se */
     #panel{
         width: 95%;
         height: 90%;
@@ -11,11 +99,10 @@
         max-height: 700px;
     }
 
-    /* Top bar ka padding 30% bahut zyada tha, use kam karte hain */
     #ptop{
-        padding: 10px 12px;
-        height: auto;              /* fixed 100px ki jagah content ke hisaab se */
-        flex-wrap: wrap;           /* items neeche aa sakte hain */
+        padding: 10px 12px;   /* 30% padding mobile pe bahut zyada ho jata hai */
+        height: auto;
+        flex-wrap: wrap;
         gap: 8px;
     }
 
@@ -32,14 +119,12 @@
         padding: 6px 10px;
     }
 
-    /* Bottom area ko zyada flexible bana dete hain */
     #pbtm{
-        height: calc(100% - 80px);   /* thoda chhota top assume */
+        height: calc(100% - 80px);
         padding: 10px;
         gap: 6px;
     }
 
-    /* Bubbles chhote, taaki mobile screen pe fit ho jayein */
     .bubble{
         width: 38px;
         height: 38px;
